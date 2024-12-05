@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker-peli: Leikkikokkaaminen</title>
+    <link rel="stylesheet" href="tyylit2.css">
+</head>
+<body>
+
+    <section>
+        <div class="main">
+            <div class="actual-left">
+            </div>
+            <div class="left">
+
+                <h3 id="otsikko1">Kokkaamisen vaihe: <span class="vaihe">0</span></h3> <!--6 vaihetta kokkaamisessa-->
+                <h5 id="otsikko2">Risuja: <span class="risujen-maara">0</span></h5>
+                
+                <div class="row">
+                    <div class="vasen-nappula column">
+                        <img src="./kuvat2/Hae-painike.png" alt ="" srcset="" class="painike01" onclick="lisaaRisuja()" draggable="false">
+                    </div>
+                    
+                    <div class="keskella column">
+                        <img src="./kuvat2/Kattila2.png" alt="" srcset="" class="kattila-img" onclick="clonkEffekti()" draggable="false">
+                    </div>
+                </div>
+                
+                <div class="ainesosa-1" style="visibility:visible">
+                    <div class="ostettu-ainesosa">
+                        <img src="" alt="" class="Valittu" id="kaytossa" draggable="false" onclick="kayta()">
+                    </div>
+                </div>
+
+            </div>
+            <div class="right">
+
+                <div class="upgrade" id="AO-hiekka">
+                    <div class="kuva-osio">
+                        <img src="./kuvat2/Sand.png" alt="" id="hiekka01" class="upgrade-img" onclick="osta1()" draggable="false">
+                    </div>
+                    <div class="otsikko-osio">
+                        <h4>Hiekkaa</h4>
+                        <div class="risun-hinta-kuvake">
+                            <p>Hinta:<span class="ainesosan-hinta1">5</span></p>
+                            <img src="./kuvat2/Risuja.png" alt="" class="risuhinta-img" draggable="false">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upgrade" id="AO-kivi" style="visibility:hidden;"> <!--pieniä kiviä x10. Hinta = 15 risua -->
+                    <div class="kuva-osio">
+                        <img src="./kuvat2/Rocks.png" alt="" id="kivi01" class="upgrade-img-kivi" onclick="osta2()" draggable="false">
+                    </div>
+                    <div class="otsikko-osio">
+                        <h4>Pieniä kiviä</h4>
+                        <div class="risun-hinta-kuvake">
+                            <p>Hinta:<span class="ainesosan-hinta2">10</span></p>
+                            <img src="./kuvat2/Risuja.png" alt="" class="risuhinta-img" draggable="false">
+                        </div>                        
+                    </div>
+                </div>
+
+
+                <div class="upgrade" id = "AO-spruce" style="visibility:hidden;"> <!--kuusen oksia x3. Hinta = 25 risua-->
+                    <div class="kuva-osio">
+                        <img src="./kuvat2/Spruce.png" alt="" id="spruce01" class="upgrade-img" onclick="osta3()" draggable="false">
+                    </div>
+                    <div class="otsikko-osio">
+                        <h4>Kuusenoksa</h4>
+                        <div class="risun-hinta-kuvake">
+                            <p>Hinta:<span class="ainesosan-hinta3">15</span></p>
+                            <img src="./kuvat2/Risuja.png" alt="" class="risuhinta-img" draggable="false">
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="upgrade" id = "AO-cone" style="visibility:hidden;"> <!--käpy x1. Hinta = 30 risua-->
+                    <div class="kuva-osio">
+                        <img src="./kuvat2/Cone.png" alt="" id="cone01" class="upgrade-img-cone" onclick="osta4()" draggable="false">
+                    </div>
+                    <div class="otsikko-osio">
+                        <h4>Käpy</h4>
+                        <div class="risun-hinta-kuvake">
+                            <p>Hinta:<span class="ainesosan-hinta4">20</span></p>
+                            <img src="./kuvat2/Risuja.png" alt="" class="risuhinta-img" draggable="false">
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="upgrade" id = "AO-vetta" style="visibility:hidden;"> <!--vettä x6 kupillista. Hinta = 40 risua-->
+                    <div class="kuva-osio">
+                        <img src="./kuvat2/CupofWater.png" alt="" id="vetta01" class="upgrade-img" onclick="osta5()" draggable="false">
+                    </div>
+                    <div class="otsikko-osio">
+                        <h4>Kuppi vettä</h4>
+                        <div class="risun-hinta-kuvake">
+                            <p>Hinta:<span class="ainesosan-hinta5">30</span></p>
+                            <img src="./kuvat2/Risuja.png" alt="" class="risuhinta-img" draggable="false">
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="upgrade" id = "AO-ruoho" style="visibility:hidden;"> <!--ruohon nippu x1. Hinta = 45 risua-->
+                    <div class="kuva-osio">
+                        <img src="./kuvat2/GrassPatch.png" alt="" id="ruoho01" class="upgrade-img-ruoho" onclick="osta6()" draggable="false">
+                    </div>
+                    <div class="otsikko-osio">
+                        <h4>Ruohoa</h4>
+                        <div class="risun-hinta-kuvake">
+                            <p>Hinta:<span class="ainesosan-hinta6">35</span></p>
+                            <img src="./kuvat2/Risuja.png" alt="" class="risuhinta-img" draggable="false">
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="upgrade" id = "AO-kukka" style="visibility:hidden;"> <!--kukanlehtiä x5. Hinta = 50 risua-->
+                    <div class="kuva-osio">
+                        <img src="./kuvat2/kukanlehti.png" alt="" id="kukka01" class="upgrade-img" onclick="osta7()" draggable="false">
+                    </div>
+                    <div class="otsikko-osio">
+                        <h4>Kukanlehtiä</h4>
+                        <div class="risun-hinta-kuvake">
+                            <p>Hinta:<span class="ainesosan-hinta7">40</span></p>
+                            <img src="./kuvat2/Risuja.png" alt="" class="risuhinta-img" draggable="false">
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <script src="JS2-koodi.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh; /*Now the gem is at the center of the page*/
+    padding: 0;
+    margin: 0; /*scrollbar pois + OK...*/
+    background-color: rgb(73, 68, 68);
+    color: white;
+    user-select: none; /*highlight eli sininen väri poistettu*/
+    background-image: url(./kuvat2/BG-muokattu.jpg); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.main {
+    display: flex; /*Saadaan oikean osion sisältö oikealle sivun osiolle*/
+    gap: 230px; /*Tilaa oik. ja vas. sivuston osion välillä, OK....*/
+}
+
+.left h3{
+    text-align: center;
+    font-size: 37px;
+    margin-bottom: 20px;
+    margin-left: 180px;
+}
+
+.left h5 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    margin-left: 160px;
+}
+
+/*hae ja kattila vierekkäin*/
+.column {
+    float: left;
+    width: 20%;
+    padding: 1px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .ainesosa-1 {
+    align-items: center;
+    justify-content:center;
+    vertical-align: middle;
+    width: 180px;
+    height: 110px;
+    border: 9px solid white;
+    margin-bottom: 20px;
+    margin-left: 255px;
+    background-color: rgb(93, 190, 76);
+}
+
+.Valittu {
+    width: 120px;
+    margin-left: 29px;
+    margin-top: 9px;
+}
+
+.upgrade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 118px;
+    height: 66px;
+    border: 4px solid white;
+    padding: 8px 0px;
+    position: relative;
+    padding-right: 3px;
+    margin-bottom: 14px;
+    background-color: rgb(115, 153, 170);
+}
+
+.kuva-osio:hover {
+    cursor: pointer;
+}
+
+.kattila-img {
+
+    margin-left: 0px;
+    width: 490px; /*Kuvan koon muokkausta*/
+    margin-bottom: 20px;
+}
+
+.painike01 {
+    width: 200px;
+    margin-top: 40px;
+    position: absolute;
+}
+
+.painike01:hover {
+
+    opacity: 0.9;
+    cursor: pointer;
+}
+.painike01:active {
+    opacity: 0.8;
+    transform:scale(1.07);
+}
+
+.Valittu:hover {
+
+    opacity: 0.9;
+    cursor: pointer;
+}
+.Valittu:active, .ainesosa-1:active {
+    opacity: 0.8;
+    transform:scale(1.07);
+}
+
+/*hinnoittelut ja ainesosat*/
+.upgrade-img {
+    width: 120px;
+}
+
+.upgrade-img-cone {
+    width: 120px;
+    height: 82px;
+}
+
+.upgrade-img-ruoho {
+    width: 120px;
+    height: 82px;
+}
+
+.upgrade-img-kivi {
+    width: 120px;
+    height: 82px;
+}
+
+.risun-hinta-kuvake {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.risuhinta-img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.otsikko-osio h4 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.otsikko-osio p {
+    margin: 10px 0px 0px 2px;
+    padding: 0px 0px 0px 7px;
+    color: rgb(87, 40, 26);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.hinta {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.middle-section h4 {
+    margin: 0;
+    margin-bottom: 29px;
+}
+
+.middle-section p {
+    margin: 0;
+}
